@@ -1,0 +1,60 @@
+// Fira Code <Google Fonts>
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+
+  body {
+      margin: 0;
+      font-family: 'Fira Code', monospace; 
+    } 
+
+  // CONTAINER
+  .container {
+    display: flex !important;
+    width: 100% !important;
+    margin: 0 auto;
+  }
+
+  /**
+   * RESPONSIVE
+   */
+@media screen and (max-width: 640px) {
+  .container {
+    width: 90% !important;
+    max-width: 600px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 90% !important;
+    max-width: 720px !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 85% !important;
+    max-width: 800px !important;
+  }
+}
+
+@media screen and (max-width: 1376px) {
+  .container {
+    width: 85% !important;
+    max-width: 1170px !important;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .container {
+    width: 80% !important;
+    max-width: 1280px !important;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .container {
+    width: 80% !important;
+    max-width: 1367px !important;
+  }
+}
