@@ -2,6 +2,7 @@
 // import BaseHead from '../components/BaseHead.astro';
 // import BlogHeader from '../components/BlogHeader.astro';
 import BlogPost from '../components/BlogPost.astro';
+import Header from '../components/Header.svelte';
 import '../blog.css';
 
 
@@ -9,18 +10,32 @@ const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt } = content;
 ---
 
-<html lang={content.lang || 'en'}>
-	<head>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css" />
-		<!-- <BaseHead {title} {description} {permalink} /> -->
-	</head>
+<html lang={content.lang || 'en' }>
 
-	<body>
-		<!-- <BlogHeader /> -->
-		<div class="wrapper">
-			<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
-				<slot />
-			</BlogPost>
-		</div>
-	</body>
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css" />
+	<!-- <BaseHead {title} {description} {permalink} /> -->
+</head>
+
+<body>
+	<!-- <BlogHeader /> -->
+	<Header />
+	<div class="wrapper">
+		<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
+			<slot />
+		</BlogPost>
+	</div>
+</body>
+
 </html>
+
+
+<style lang="scss">
+	.wrapper {
+		width: 100%;
+		min-height: 100vh;
+		background-color: white;
+		margin-top: 0;
+		padding-top: 0;
+	}
+</style>

@@ -10,16 +10,13 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 <Layout title="Latest blogs | 0xMahabub">
     <main>
-        <h1>Welcome to <span class="text-gradient">0xMahabub's Blogs</span></h1>
-        <div class="instructions">
-            <h4 class="code">
-                I'm a student at Computer Science and Engineering.
-            </h4>
-        </div>
-
-        <div class="menu">
-            {allPosts.map((p) =>
-            <BlogPostPreview post={p} />)}
+        <div class="container">
+            <div>
+                <div class="mt-5">
+                    {allPosts.map((p) =>
+                    <BlogPostPreview post={p} />)}
+                </div>
+            </div>
         </div>
     </main>
 </Layout>
@@ -28,7 +25,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 <style>
     :root {
-        --astro-gradient: linear-gradient(0deg, #4F39FA, #DA62C4);
+        --astro-gradient: linear-gradient(0deg, #9e9da5, #d6291d);
     }
 
     h1 {
@@ -38,7 +35,10 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
     main {
         margin: auto;
         padding: 1em;
-        max-width: 60ch;
+    }
+
+    main .container {
+        flex-direction: column;
     }
 
     .text-gradient {
@@ -66,14 +66,14 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
     .instructions {
         line-height: 1.6;
-        margin: 1rem 0;
-        background: #4F39FA;
+        margin: 1rem auto;
+        background: #209129;
         padding: 1.0rem;
         border-radius: 0.4rem;
         color: var(--color-bg);
     }
 
-    .instructions code {
+    .instructions .code {
         font-size: 0.875em;
         border: 0.1em solid var(--color-border);
         border-radius: 4px;

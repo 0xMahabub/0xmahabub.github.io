@@ -7,11 +7,30 @@
       font-family: 'Fira Code', monospace; 
     } 
 
+  a {
+    &:hover {
+      outline: none;
+    }
+  }
+
+  img {
+    &:hover {
+      outline: none;
+    }
+  }
+
   // CONTAINER
   .container {
     display: flex !important;
     width: 100% !important;
     margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+
+    &__row {
+      flex-direction: row;
+    }
   }
 
   /**
@@ -21,6 +40,11 @@
   .container {
     width: 90% !important;
     max-width: 600px !important;
+
+    // blog
+    &__blog{
+      width: 100%; 
+    }
   }
 }
 
@@ -28,6 +52,11 @@
   .container {
     width: 90% !important;
     max-width: 720px !important;
+
+    // blog
+    &__blog{
+      width: 100%; 
+    }
   }
 }
 
@@ -35,6 +64,12 @@
   .container {
     width: 85% !important;
     max-width: 800px !important;
+
+    // blog
+    &__blog{
+      width: 90%;
+      max-width: 860px; 
+    }
   }
 }
 
@@ -42,6 +77,12 @@
   .container {
     width: 85% !important;
     max-width: 1170px !important;
+
+    // blog
+    &__blog{
+      width: 70%;
+      max-width: 930px; 
+    }
   }
 }
 
@@ -49,6 +90,12 @@
   .container {
     width: 80% !important;
     max-width: 1280px !important;
+
+    // blog
+    &__blog{
+      width: 65%;
+      max-width: 1000px; 
+    }
   }
 }
 
@@ -56,5 +103,11 @@
   .container {
     width: 80% !important;
     max-width: 1367px !important;
+
+    // blog
+    &__blog{
+      width: 60%;
+      max-width: 1170px; 
+    }
   }
 }

@@ -14,17 +14,15 @@ const { title, author, publishDate, heroImage, alt } = Astro.props;
 
 <div class="layout">
 	<article class="content">
-		<div>
-			<header>
-				{heroImage && <img width="720" height="420" class="hero-image" loading="lazy" src={heroImage} alt={alt} />}
-				<p class="publish-date">{publishDate}</p>
-				<h1 class="title">{title}</h1>
-				<Author name="@FredKSchott" href="https://twitter.com/FredKSchott" />
-			</header>
-			<main>
-				<slot />
-			</main>
-		</div>
+		<header>
+			{heroImage && <img width="720" height="420" class="hero-image" loading="lazy" src={heroImage} alt={alt} />}
+			<p class="publish-date mt-10">{publishDate}</p>
+			<h1 class="title">{title}</h1>
+			<Author name={author} href="https://twitter.com/mahabub__7" />
+		</header>
+		<main>
+			<slot />
+		</main>
 	</article>
 </div>
 
@@ -33,7 +31,7 @@ const { title, author, publishDate, heroImage, alt } = Astro.props;
 		width: 100vw;
 		object-fit: cover;
 		object-position: center;
-		margin-top: 2rem;
+		/* margin-top: 2rem; */
 		margin-bottom: 4rem;
 		max-width: 1280px;
 	}
@@ -51,11 +49,11 @@ const { title, author, publishDate, heroImage, alt } = Astro.props;
 	}
 
 	.content :global(main > * + *) {
-		margin-top: 1rem;
+		/* margin-top: 1rem; */
 	}
 
 	.content :global(h2) {
-		margin-top: 4rem;
+		/* margin-top: 4rem; */
 	}
 
 	header {
