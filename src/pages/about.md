@@ -1,8 +1,8 @@
 ---
-layout: "../layouts/BlogPost.astro"
+layout: "../layouts/Page.astro"
 title: "About Me"
 description: "Lorem ipsum dolor sit amet"
-updatedDate: "August 08 2022"
+updatedDate: "September 13 2022"
 heroImage: "/me.jpg"
 ---
 

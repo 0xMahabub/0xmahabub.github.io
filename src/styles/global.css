@@ -3,11 +3,13 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
+
+
 body {
 	font-family: Verdana, sans-serif;
 	margin: auto;
 	padding: 20px;
-	max-width: 65ch;
+	max-width: 1140px;
 	text-align: left;
 	background-color: #fff;
 	word-wrap: break-word;
@@ -47,6 +49,7 @@ table {
 img {
 	max-width: 100%;
 	height: auto;
+	margin: 0 auto;
 }
 code {
 	padding: 2px 5px;
@@ -73,6 +76,22 @@ blockquote {
  * -------------------------------------------------------------------
  */
 
+
+.container {
+	width: 82.848%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+
+article img {
+	width: 100%;
+	max-width: 1140px;
+	height: auto;
+	max-height: 400px;
+	object-fit: cover;
+}
+
 .mahabub__highlight {
 	display: block;
 	margin-top: 2rem;
@@ -87,4 +106,29 @@ blockquote {
 	-moz-border-radius: .35rem;
 	-ms-border-radius: .35rem;
 	-o-border-radius: .35rem;
+}
+
+
+
+
+
+
+/**-------------------------------------------------------------------
+ * RESPONSIVE CSS
+ * -------------------------------------------------------------------
+ */
+
+@media screen and (max-width: 720px) {
+	.container {
+		width: 96.9%;
+		max-width: 680px;
+	}
+}
+
+
+@media screen and (max-width: 460px) {
+	.container {
+		width: 98%;
+		max-width: 420px;
+	}
 }
