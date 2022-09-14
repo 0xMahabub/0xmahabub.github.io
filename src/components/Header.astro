@@ -1,27 +1,67 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../config';
+// import { SITE_TITLE } from '../config';
 ---
 
 <header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
+	<h2>0xMahabub<span>;</span></h2>
+
 	<nav>
 		<HeaderLink href="/">Home</HeaderLink>
 		<HeaderLink href="/blog">Blog</HeaderLink>
 		<HeaderLink href="/projects">Projects</HeaderLink>
 		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/mahabub__7" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/0xMahabub" target="_blank">GitHub</HeaderLink>
 		<HeaderLink href="/contact">Contact</HeaderLink>
+		<HeaderLink href="https://github.com/0xMahabub" target="_blank">
+			<img height="24" width="24" src="https://unpkg.com/simple-icons@v7/icons/github.svg" />
+		</HeaderLink>
+		<!-- <HeaderLink href="https://hackerrank.com/mahabub072" target="_blank">
+			<img height="24" width="24" src="https://unpkg.com/simple-icons@v7/icons/hackerrank.svg" />
+		</HeaderLink> -->
+		<HeaderLink href="https://linkedin.com/in/0xmahabub/" target="_blank">
+			<img height="24" width="24" src="https://unpkg.com/simple-icons@v7/icons/linkedin.svg" />
+		</HeaderLink>
+		<HeaderLink href="https://facebook.com/mahabub6333" target="_blank">
+			<img height="24" width="24" src="https://unpkg.com/simple-icons@v7/icons/facebook.svg" />
+		</HeaderLink>
+		<HeaderLink href="https://twitter.com/mahabub__7" target="_blank">
+			<img height="24" width="24" src="https://unpkg.com/simple-icons@v7/icons/twitter.svg" />
+		</HeaderLink>
+		
+
+		
 	</nav>
 </header>
 <style>
 	header {
-		margin: 0em 0 2em;
+		margin: 0 0 2.5rem;
+		display: flex;
+		justify-content: space-between;
+		padding: 1rem 0.3rem;
+		height: 3.5rem;
 	}
+
+	header h2 {
+		vertical-align: middle;
+		height: 100%;
+		font-family: 'Fira Mono', monospace;
+		color: #333;
+	}
+
+	header h2 span {
+		color: #666;
+	}
+
+	header nav {
+		display: flex;
+		gap: 0.8rem;
+		justify-content: end;
+		align-items: center;
+		height: 100%;
+	}
+
 	h2 {
 		margin: 0.5em 0;
 	}
+	
 </style>
