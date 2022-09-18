@@ -16,14 +16,49 @@ heroImage: "/me.jpg"
 
 ## Get in touch
 
+
+<div class="social__links">
+    <HeaderLink class="sc_link" href="https://github.com/0xMahabub" target="_blank">
+        <img
+          height="24"
+          width="24"
+          src="https://unpkg.com/simple-icons@v7/icons/github.svg"
+        />
+      </HeaderLink>
+      <!-- <HeaderLink href="https://hackerrank.com/mahabub072" target="_blank">
+			<img height="24" width="24" src="https://unpkg.com/simple-icons@v7/icons/hackerrank.svg" />
+		</HeaderLink> -->
+      <HeaderLink class="sc_link" href="https://linkedin.com/in/0xmahabub/" target="_blank">
+        <img
+          height="24"
+          width="24"
+          src="https://unpkg.com/simple-icons@v7/icons/linkedin.svg"
+        />
+      </HeaderLink>
+      <HeaderLink class="sc_link" href="https://facebook.com/mahabub6333" target="_blank">
+        <img
+          height="24"
+          width="24"
+          src="https://unpkg.com/simple-icons@v7/icons/facebook.svg"
+        />
+      </HeaderLink>
+      <HeaderLink class="sc_link" href="https://twitter.com/mahabub__7" target="_blank">
+        <img
+          height="24"
+          width="24"
+          src="https://unpkg.com/simple-icons@v7/icons/twitter.svg"
+        />
+      </HeaderLink>
+</div>
+
 <div class="contact__info">
 <a href="mail:mahabubx7@icloud.com">
     <img width="24" height="24" src="https://unpkg.com/simple-icons@v7/icons/gmail.svg" />
-    <span title="mahabub2000bd@gmail.com or iosmahabub@gmail.com">Send me an e-mail!</span>
+    <span title="mahabub2000bd@gmail.com or iosmahabub@gmail.com">Mail me!</span>
 </a> <br />
 
 <a href="whatsapp://wa.me/8801311052448">
     <img width="24" height="24" src="https://unpkg.com/simple-icons@v7/icons/whatsapp.svg" />
-    <span>DM me on Whatsapp!</span>
+    <span>DM me!</span>
 </a> 
 </div>
