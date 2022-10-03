@@ -100,6 +100,12 @@ blockquote {
 	margin: 0 auto;
 }
 
+main .wrapper {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
 .header__container {
 	width: 100%;
 	max-width: 1140px;
@@ -248,7 +254,7 @@ header nav a img svg path {
 }
 
 .page__content {
-	width: 85%;
+	width: 100%;
 	max-width: 1140px;
 	margin: 0 auto;
 }
