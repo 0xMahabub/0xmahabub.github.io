@@ -5,6 +5,18 @@
  */
 
 
+:root {
+	--underline-intrinsic-width: 16;
+	--underline-width: 12;
+	--underline-color: #fae933;
+	--underline-cap-width: 4px;
+	--underline-offset-y: -8px;
+	--underline-padding-x: 0.1em;
+	--cap-image-left: url(https://files-d4s40otz1.now.sh/left.svg);
+  --cap-image-right: url(https://files-4vvqilj8v.now.sh/right.svg);
+}
+
+
 /**
  * Maven Pro :: primary fonts for this website
  * Fira Mono :: code fonts for this website
@@ -316,6 +328,100 @@ header nav a img svg path {
 	-o-border-radius: 50%;
 }
 
+.text-center {
+	text-align: center;
+}
+
+.highlight__underline {
+	display: inline;
+	text-decoration: underline;
+	--underline-width-scale: calc(var(--underline-width) / var(--underline-intrinsic-width));
+	padding: 0 calc(var(--underline-padding-x) + calc(var(--underline-cap-width) * var(--underline-width-scale)));
+	box-decoration-break: clone;
+  background-repeat: no-repeat;
+  color: #1221ff;
+  background-image:
+    linear-gradient(180deg, var(--underline-color), var(--underline-color)),
+    var(--cap-image-left),
+    var(--cap-image-right);
+	background-position-x:
+    calc(var(--underline-cap-width) * var(--underline-width-scale)),
+    0,
+    100%;
+  background-position-y: calc(100% - var(--underline-offset-y) * -1);
+  background-size:
+    calc(100% - calc(var(--underline-cap-width) * var(--underline-width-scale) * 2)) calc(var(--underline-width) * 1px),
+    auto calc(var(--underline-width) * 1px),
+    auto calc(var(--underline-width) * 1px);
+}
+
+
+.intro {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.intro .intro__left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.intro .intro__left img {
+	object-fit: cover;
+	max-width: 50%;
+	border: solid .15rem #3273dc;
+	border-radius: 50%;
+	box-shadow: 0 0 1rem .25rem rgba(50, 115, 220, 0.5);
+} 
+
+
+.intro .intro__right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding-left: 0;
+}
+.intro .intro__right h2 {
+	font-size: 36px;
+	color: #3273dc;
+	font-family: 'Fira Mono', monospace;
+}
+
+.intro .intro__right ul {
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.intro .intro__right ul li {
+	font-family: 'Fira Mono', monospace;
+}
+
+
+
+
+.edu {
+	overflow-x: scroll;
+}
+
+.edu__table {
+	background: #4273c3;
+	color: white;
+	border: 1px solid transparent;
+	min-width: 600px;
+}
+
+.edu__table tr:nth-child(2n) {
+	background-color: #4884aa;
+}
+
+
+
+
 
 
 /**-------------------------------------------------------------------
@@ -340,6 +446,11 @@ header nav a img svg path {
 	body {
 		max-width: 100%;
 	}
+
+	.intro {
+		flex-direction: column;
+		justify-content: center;
+	}
 	
 	.container,
 	.wrapper {
@@ -363,7 +474,8 @@ header nav a img svg path {
 @media screen and (max-width: 720px) {
 
 	.container,
-	.wrapper {
+	.wrapper,
+	main .wrapper {
 		width: 96.9%;
 		max-width: 680px;
 	}
@@ -388,6 +500,10 @@ header nav a img svg path {
 		flex-direction: column;
 		gap: .25rem 0;
 	}
+
+	.highlight__underline {
+		background-image: inherit;
+	}
 }
 
 
@@ -411,7 +527,8 @@ header nav a img svg path {
 	}
 
 	article,
-	.wrapper {
+	.wrapper,
+	main .wrapper {
 		padding: 0 .75rem;
 		width: calc(100% - 1.5rem);
 	}

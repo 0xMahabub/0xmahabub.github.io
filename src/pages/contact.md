@@ -6,15 +6,15 @@ updatedDate: "September 13 2022"
 heroImage: "/me.jpg"
 ---
 
-# Current Address
+# \# Current Address
 `West Shewrapara, Mirpur, Dhaka - 1216`
 
-# Permanent Address
+# \# Permanent Address
 `Boro Pathra, Borannga, Keshabpur`
 <br />
 `Jashore, Khulna`
 
-## Get in touch
+## \# Get in touch
 
 
 <div class="social__links">
@@ -25,7 +25,8 @@ heroImage: "/me.jpg"
           src="https://unpkg.com/simple-icons@v7/icons/github.svg"
         />
       </HeaderLink>
-      <!-- <HeaderLink href="https://hackerrank.com/mahabub072" target="_blank">
+      <!--
+      <HeaderLink href="https://hackerrank.com/mahabub072" target="_blank">
 			<img height="24" width="24" src="https://unpkg.com/simple-icons@v7/icons/hackerrank.svg" />
 		</HeaderLink> -->
       <HeaderLink class="sc_link" href="https://linkedin.com/in/0xmahabub/" target="_blank">
@@ -59,6 +60,6 @@ heroImage: "/me.jpg"
 
 <a href="whatsapp://wa.me/8801311052448">
     <img width="24" height="24" src="https://unpkg.com/simple-icons@v7/icons/whatsapp.svg" />
-    <span>DM me!</span>
+    <span>DM me</span>
 </a> 
 </div>
