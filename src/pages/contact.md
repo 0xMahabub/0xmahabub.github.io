@@ -3,7 +3,7 @@ layout: "../layouts/Page.astro"
 title: "Contact"
 description: "Contact to 0xMahabub (Md. Mahabub Alam)"
 updatedDate: "September 13 2022"
-heroImage: "/me.jpg"
+heroImage: "/me-2.png"
 ---
 
 # \# Current Address
@@ -60,6 +60,6 @@ heroImage: "/me.jpg"
 
 <a href="whatsapp://wa.me/8801311052448">
     <img width="24" height="24" src="https://unpkg.com/simple-icons@v7/icons/whatsapp.svg" />
-    <span>DM me</span>
+    <span>Call me!</span>
 </a> 
 </div>

@@ -4,6 +4,7 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
+ @charset "utf-8";
 
 :root {
 	--underline-intrinsic-width: 16;
@@ -131,11 +132,17 @@ main .wrapper {
 	font-size: 1.8rem;
 }
 
+.author {
+	font-family: 'Fira Mono', monospace;
+	color: #3a3b3f;
+	font-weight: 600;
+}
+
 article img {
 	width: 100%;
 	max-width: 1140px;
 	height: auto;
-	max-height: 460px;
+	max-height: 680px;
 	object-fit: cover;
 }
 
@@ -149,6 +156,141 @@ article a {
 article a img {
 	width: 24px;
 	height: 24px;
+}
+
+
+
+.page__content {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.page__content ul {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem 2rem;
+	flex-wrap: wrap;
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.page__content ul li {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	background: white;
+	color: #3d3d3d;
+	box-shadow: 0 0 .5rem .1rem rgba(0,0,0, 0.1);
+	border-radius: .3rem;
+	overflow: hidden;
+	-webkit-border-radius: .3rem;
+	-moz-border-radius: .3rem;
+	-ms-border-radius: .3rem;
+	-o-border-radius: .3rem;
+}
+
+.page__content ul li img {
+	min-height: 220px;
+	max-height: 220px;
+	image-rendering: optimizeSpeed;
+	image-orientation: from-image;
+	width: auto;
+	width: auto;
+	object-fit: cover;
+}
+
+.card__content,
+.tags__container {
+	padding: 1rem;
+}
+
+.page__content ul li a {
+	font-size: 1.25rem;
+	text-decoration: none;
+}
+
+
+
+.page__content ul li a:hover,
+.page__content ul li a:active {
+	color: green;
+	text-decoration: underline;
+}
+
+#articles.page__content img {
+	width: auto;
+	min-height: 220px;
+	object-fit: cover;
+}
+
+.page__heroimg {
+	max-height: 400px;
+	object-fit: cover;
+	object-position: top;
+	image-rendering: optimizeSpeed;
+}
+
+.tags__container {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: flex-start;
+	gap: .8rem;
+	margin-bottom: .7rem;
+}
+
+.tags__container b {
+	font-family: 'Fira Mono', monospace;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.tags__container ul {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
+	margin-left: 0;
+	list-style: none;
+	align-items: center;
+	gap: .8rem;
+	margin-bottom: 1rem;
+}
+
+.tags__container ul li {
+	text-transform: capitalize;
+	font-size: .75rem;
+	font-family: 'Fira Mono', monospace;
+	color: white;
+	background: #10c340;
+	font-weight: 300;
+	padding: .2rem .8rem;
+	border-radius: .2rem;
+	cursor: pointer;
+}
+
+.tags__in__card {
+	display: flex;
+	width: 100%;
+	font-size: .8rem;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 0 1rem !important;
+}
+
+.tags__in__card b {
+	color: #4A4B4C;
+}
+
+.page__content .tags__in__card ul {
+	gap: .5rem;
+}
+
+.tags__in__card ul li {
+	background: #10c340 !important;
+	color: white !important;
 }
 
 .mahabub__highlight {
@@ -265,47 +407,6 @@ header nav a img svg path {
 	-o-border-radius: .3rem;
 }
 
-.page__content {
-	width: 100%;
-	max-width: 1140px;
-	margin: 0 auto;
-}
-
-.page__content ul {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 3rem 2rem;
-	list-style: none;
-	padding-left: 0;
-	margin-left: 0;
-}
-
-.page__content ul li {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background: white;
-	color: #3d3d3d;
-	box-shadow: 0 0 .5rem .1rem rgba(0,0,0, 0.1);
-	border-radius: .3rem;
-	overflow: hidden;
-	-webkit-border-radius: .3rem;
-	-moz-border-radius: .3rem;
-	-ms-border-radius: .3rem;
-	-o-border-radius: .3rem;
-}
-
-.page__content ul li a {
-	font-size: 1.25rem;
-	text-decoration: none;
-}
-
-.page__content ul li a:hover,
-.page__content ul li a:active {
-	color: green;
-	text-decoration: underline;
-}
-
 
 .social__links {
 	display: flex;
@@ -399,6 +500,12 @@ header nav a img svg path {
 
 .intro .intro__right ul li {
 	font-family: 'Fira Mono', monospace;
+}
+
+.intro .intro__right ul li b {
+	text-decoration: underline;
+	color: #3d3d3d;
+	font-weight: 600;
 }
 
 

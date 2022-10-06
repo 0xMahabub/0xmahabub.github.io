@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { SITE_TITLE, SITE_DESCRIPTION, PHOTO } from '../config';
 ---
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
         <br />
         <div class="intro">
           <div class="intro__left">
-            <img src="https://avatars.githubusercontent.com/u/86561283" alt="0xMahabub" />
+            <img src={PHOTO} alt="0xMahabub" />
           </div>
 
           
@@ -32,7 +32,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
               <li><b>Frontend:</b> HTML/CSS, JS/TS, React, Angular (soon).</li>
               <li><b>Backend:</b> Nodejs/ExpressJs/NestJs, Spring Framework (soon).</li>
               <li><b>Database:</b> NoSQL/MongoDB, SQLs/MySQL/PostgreSQL (soon).</li>
-              <li><b>Tool & More:</b> Linux (Ubuntu), Git/Github, Docker, CI/CD.<br />
+              <li><b>Tools & More:</b> Linux (Ubuntu), Git/Github, Docker, CI/CD.<br />
                 
               </li>
               <li><small>Note: I'm (@Freshman) still learning and practicing.</small></li>

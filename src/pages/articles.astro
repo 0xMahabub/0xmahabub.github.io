@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
-const projects = (await Astro.glob('./project/*.{md,mdx}')).sort(
+const articles = (await Astro.glob('./article/*.{md,mdx}')).sort(
   (a, b) =>
     new Date(b.frontmatter.pubDate).valueOf() -
     new Date(a.frontmatter.pubDate).valueOf()
@@ -36,21 +36,21 @@ const projects = (await Astro.glob('./project/*.{md,mdx}')).sort(
   <body>
     <Header />
     <main>
-      <section class="page__content">
+      <section class="page__content" id="articles">
         <ul>
           {
-            projects.map((project) => (
+            articles.map((article) => (
               <li>
                 <img
-                    src={project.frontmatter.heroImage}
-                    alt={project.frontmatter.title}
+                    src={article.frontmatter.heroImage}
+                    alt={article.frontmatter.title}
                   />
                 <div class="card__content">
-                  <a href={project.url}>{project.frontmatter.title}</a>
+                  <a href={article.url}>{article.frontmatter.title}</a>
                   <br />
-                  <time datetime={project.frontmatter.pubDate}>
+                  <time datetime={article.frontmatter.pubDate}>
                     <small>Published on: </small>
-                    {new Date(project.frontmatter.pubDate).toLocaleDateString(
+                    {new Date(article.frontmatter.pubDate).toLocaleDateString(
                       'en-us',
                       {
                         year: 'numeric',
@@ -63,7 +63,7 @@ const projects = (await Astro.glob('./project/*.{md,mdx}')).sort(
                 <div class="tags__container tags__in__card">
                   <ul>
                     <b>Tags: </b>
-                    {project.frontmatter.tags && project.frontmatter.tags.map(tag => (
+                    {article.frontmatter.tags && article.frontmatter.tags.map(tag => (
                       <li>{tag}</li>
                     ))}
                   </ul>

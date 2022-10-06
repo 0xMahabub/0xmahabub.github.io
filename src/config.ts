@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = '0xMahabub;';
 export const SITE_DESCRIPTION = '0xMahabub | Programmer | Developer';
+export const PHOTO = `https://avatars.githubusercontent.com/u/86561283`;

@@ -10,17 +10,18 @@ export interface Props {
     pubDate?: string;
     updatedDate?: string;
     heroImage?: string;
+    tags?: string[];
   };
 }
 
 const {
-  content: { title, description, pubDate, updatedDate, heroImage }
+  content: { title, description, pubDate, updatedDate, heroImage, tags }
 } = Astro.props;
 ---
 
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description} />
+    <BaseHead title={title} description={description} image={heroImage} />
     <style>
       .title {
         font-size: 2em;
@@ -44,6 +45,18 @@ const {
           updatedDate && (
             <div>
               Last updated on <time>{updatedDate}</time>
+            </div>
+          )
+        }
+        {
+          tags && (
+            <div class="tags__container">
+              <b># Tags: </b>
+              <ul>
+                {tags.map(t => (
+                  <li>{t}</li>
+                ))}
+              </ul>
             </div>
           )
         }

@@ -6,6 +6,7 @@ import Footer from "../components/Footer.astro";
 export interface Props {
 	content: {
 		title: string;
+		author?: string;
 		description: string;
 		pubDate?: string;
 		updatedDate?: string;
@@ -14,13 +15,13 @@ export interface Props {
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage },
+	content: { title, description, pubDate, updatedDate, heroImage, author },
 } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={heroImage} />
 		<style>
 			.title {
 				font-size: 2em;
@@ -44,7 +45,8 @@ const {
 					/>
 				)}
 				<h1 class="title">{title}</h1>
-				{pubDate && <time>{pubDate}</time>}
+				{pubDate && <label>Published On: <time>{pubDate}</time></label>}
+				{author && <br /><small class="author">Author: {author}</small>}
 				{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
 				<hr/>
 				<slot />

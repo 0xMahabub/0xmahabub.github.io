@@ -11,10 +11,12 @@
     "deploy": "npm run build && gh-pages -t -d dist"
   },
   "dependencies": {
+    "@astrojs/image": "^0.9.1",
     "@astrojs/mdx": "^0.11.1",
     "@astrojs/rss": "^1.0.1",
     "@astrojs/sitemap": "^1.0.0",
-    "astro": "^1.2.2"
+    "astro": "^1.2.2",
+    "sharp": "^0.31.1"
   },
   "devDependencies": {
     "eslint-config-astro": "^1.0.8",
