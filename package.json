@@ -1,5 +1,5 @@
 {
-  "name": "@0xMahabub/website|blog",
+  "name": "personal-portfolio-website-etc",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -25,5 +25,12 @@
   },
   "lint": "eslint .",
   "lint:fix": "eslint --fix",
-  "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json,astro}'"
+  "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json,astro}'",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xMahabub/0xmahabub.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/0xMahabub/0xmahabub.github.io/issues"
+  }
 }
