@@ -17,7 +17,12 @@ const { title, description, image = '/placeholder.jpeg' } = Astro.props;
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
-<meta name="google-site-verification" content="LS3EfFuu9w_rDZGy6Q0Ig5B7qUk0NWvOETVktw_ys6I" />
+
+<!-- Google Search Console -->
+<meta
+  name="google-site-verification"
+  content="LS3EfFuu9w_rDZGy6Q0Ig5B7qUk0NWvOETVktw_ys6I"
+/>
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -32,8 +37,9 @@ const { title, description, image = '/placeholder.jpeg' } = Astro.props;
 <meta property="og:image" content={new URL(image, Astro.url)} />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:card" content="summary" />
 <meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:site" content="mahabub__7" />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />

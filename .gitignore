@@ -17,3 +17,13 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Windows
+.exe
+.msi
+.ink
+.ini
+
+# husky
+.husky/*
+!.husky/pre-commit
