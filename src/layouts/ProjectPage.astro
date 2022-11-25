@@ -34,7 +34,7 @@ const {
     </style>
   </head>
 
-  <body>
+  <body data-theme="light">
     <Header />
     <main>
       <article>
@@ -53,7 +53,7 @@ const {
             <div class="tags__container">
               <b># Tags: </b>
               <ul>
-                {tags.map(t => (
+                {tags.map((t) => (
                   <li>{t}</li>
                 ))}
               </ul>

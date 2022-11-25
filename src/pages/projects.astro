@@ -33,7 +33,7 @@ const projects = (await Astro.glob('./project/*.{md,mdx}')).sort(
       }
     </style>
   </head>
-  <body>
+  <body data-theme="light">
     <Header />
     <main>
       <section class="page__content">
@@ -42,9 +42,9 @@ const projects = (await Astro.glob('./project/*.{md,mdx}')).sort(
             projects.map((project) => (
               <li>
                 <img
-                    src={project.frontmatter.heroImage}
-                    alt={project.frontmatter.title}
-                  />
+                  src={project.frontmatter.heroImage}
+                  alt={project.frontmatter.title}
+                />
                 <div class="card__content">
                   <a href={project.url}>{project.frontmatter.title}</a>
                   <br />
@@ -63,9 +63,8 @@ const projects = (await Astro.glob('./project/*.{md,mdx}')).sort(
                 <div class="tags__container tags__in__card">
                   <ul>
                     <b>Tags: </b>
-                    {project.frontmatter.tags && project.frontmatter.tags.map(tag => (
-                      <li>{tag}</li>
-                    ))}
+                    {project.frontmatter.tags &&
+                      project.frontmatter.tags.map((tag) => <li>{tag}</li>)}
                   </ul>
                 </div>
               </li>

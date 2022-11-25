@@ -1,6 +1,7 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 // import { SITE_TITLE } from '../config';
+import Toggle from './ThemeSwitch.astro';
 ---
 
 <header>
@@ -8,41 +9,26 @@ import HeaderLink from './HeaderLink.astro';
     <h2>0xMahabub<span>;</span></h2>
 
     <nav id="primaryNav">
+      <Toggle />
       <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/articles">Articles</HeaderLink>
       <HeaderLink href="/projects">Projects</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink>
       <HeaderLink href="/contact">Contact</HeaderLink>
       <HeaderLink href="https://github.com/0xMahabub" target="_blank">
-        <img
-          height="24"
-          width="24"
-          src="https://unpkg.com/simple-icons@v7/icons/github.svg"
-        />
+        <i class="bx bxl-github icon-color"></i>
       </HeaderLink>
       <!-- <HeaderLink href="https://hackerrank.com/mahabub072" target="_blank">
 			<img height="24" width="24" src="https://unpkg.com/simple-icons@v7/icons/hackerrank.svg" />
 		</HeaderLink> -->
       <HeaderLink href="https://linkedin.com/in/0xmahabub/" target="_blank">
-        <img
-          height="24"
-          width="24"
-          src="https://unpkg.com/simple-icons@v7/icons/linkedin.svg"
-        />
+        <i class="bx bxl-linkedin-square icon-color"></i>
       </HeaderLink>
       <HeaderLink href="https://facebook.com/mahabub6333" target="_blank">
-        <img
-          height="24"
-          width="24"
-          src="https://unpkg.com/simple-icons@v7/icons/facebook.svg"
-        />
+        <i class="bx bxl-facebook-circle icon-color"></i>
       </HeaderLink>
       <HeaderLink href="https://twitter.com/mahabub__7" target="_blank">
-        <img
-          height="24"
-          width="24"
-          src="https://unpkg.com/simple-icons@v7/icons/twitter.svg"
-        />
+        <i class="bx bxl-twitter icon-color"></i>
       </HeaderLink>
     </nav>
   </div>
@@ -55,33 +41,40 @@ import HeaderLink from './HeaderLink.astro';
 
     <div id="mobileMenuBody">
       <div class="wrapper">
+        <button id="mobileModeToggle" type="button">
+          <i id="modeToggleSwitch" class="bx bx-toggle-left icon-color"></i>
+        </button>
         <HeaderLink class="mobile-link" href="/">
-          <i class="bx bx-home-alt-2"></i>
+          <i class="bx bx-home-alt-2 icon-color"></i>
           <span>home</span>
         </HeaderLink>
         <HeaderLink class="mobile-link" href="/articles">
-          <i class="bx bx-book-reader"></i>
+          <i class="bx bx-book-reader icon-color"></i>
           <span>articles</span>
         </HeaderLink>
         <HeaderLink class="mobile-link" href="/projects">
-          <i class="bx bx-briefcase-alt"></i>
+          <i class="bx bx-briefcase-alt icon-color"></i>
           <span>projects</span>
         </HeaderLink>
         <HeaderLink class="mobile-link" href="/about">
-          <i class="bx bx-error-alt"></i>
+          <i class="bx bx-error-alt icon-color"></i>
           <span>about</span>
         </HeaderLink>
         <HeaderLink class="mobile-link" href="/contact">
-          <i class="bx bx-id-card"></i>
+          <i class="bx bx-id-card icon-color"></i>
           <span>contact</span>
         </HeaderLink>
       </div>
     </div>
   </nav>
+
+  <button id="backToTop" class="back-to-top hidden">
+    <i class="bx bx-up-arrow-alt"></i>
+  </button>
 </header>
 <style>
   header {
-    margin: 0 0 2.5rem;
+    margin: 0 0 1.5rem;
     display: flex;
     justify-content: space-between;
     padding: 1rem 0.3rem;
@@ -93,7 +86,8 @@ import HeaderLink from './HeaderLink.astro';
     vertical-align: middle;
     height: 100%;
     font-family: 'Fira Mono', monospace;
-    color: #3d3d3d;
+    color: var(--bold-txt);
+    margin-bottom: 0;
   }
 
   header h2 span {
@@ -108,13 +102,10 @@ import HeaderLink from './HeaderLink.astro';
     height: 100%;
   }
 
-  h2 {
-    margin: 0.5em 0;
-  }
-
   #mobileNav {
     display: none;
     visibility: hidden;
+    transition: all 0.25s;
   }
 
   .mobile-link {

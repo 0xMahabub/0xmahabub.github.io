@@ -1,5 +1,5 @@
 {
-  "name": "personal-portfolio-website-0xMahabub",
+  "name": "personal-portfolio-website-0xmahabub",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -32,7 +32,7 @@
   },
   "lint-staged": {
     "*.(js|jsx|ts|tsx)": "eslint",
-    "*(html|astro|json)": "prettier --write"
+    "*.(html|astro|json)": "prettier --write"
   },
   "engines": {
     "node": ">=14.18.0"

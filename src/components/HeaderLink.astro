@@ -1,29 +1,27 @@
 ---
-export type Props = astroHTML.JSX.AnchorHTMLAttributes
+export type Props = astroHTML.JSX.AnchorHTMLAttributes;
 
 const { href, class: className, ...props } = Astro.props;
 const isActive = href === Astro.url.pathname;
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
-	<slot />
+  <slot />
 </a>
 <style>
-	a {
-		display: inline-flex;
-		text-decoration: none;
-		color: #4A4A4A;
-		font-weight: 500;
-		font-family: 'Fira Mono', monospace;
-		justify-content: center;
-		align-items: center;
-	}
+  a {
+    display: inline-flex;
+    text-decoration: none;
+    color: var(--color-txt2);
+    font-weight: 500;
+    font-family: 'Fira Mono', monospace;
+    justify-content: center;
+    align-items: center;
+  }
 
-	a.active {
-		font-weight: bolder;
-		text-decoration: underline;
-		color: #3273dc;
-	}
-
-
+  a.active {
+    font-weight: bolder;
+    text-decoration: underline;
+    color: #3273dc;
+  }
 </style>

@@ -10,13 +10,20 @@ import { SITE_TITLE, SITE_DESCRIPTION, PHOTO } from '../config';
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <body data-theme="light">
     <Header title={SITE_TITLE} />
     <main>
       <div class="wrapper">
         <h1 class="text-center">🧑‍🚀 Hello, I'm Mahabub! (মাহাবুব)</h1>
-        <p class="text-center">
-          <i>Recently, focusing to be a SDE or SWE. <br /> <small>[SDE ~ Software Development Engineer] & [SWE ~ Software Engineer]</small></i>
+        <p class="text-center text-sm">
+          <i
+            >Recently, focusing to be a BE/FE/SDE/SWE. <br />
+            <small>[BE ~ Backend Engineer] & [FE ~ Full-stack Engineer]</small>
+            <small
+              >& [SDE ~ Software Development Engineer] & [SWE ~ Software
+              Engineer]</small
+            >
+          </i>
         </p>
         <br />
         <div class="intro">
@@ -24,22 +31,37 @@ import { SITE_TITLE, SITE_DESCRIPTION, PHOTO } from '../config';
             <img src={PHOTO} alt="0xMahabub" />
           </div>
 
-          
           <div class="intro__right">
             <h2 class="highlight__underline">What I do & My skills</h2>
             <ul>
-              <li><b>Programming Languages:</b> C/C++, Python, Java (soon), JavaScripts.</li>
-              <li><b>Frontend:</b> HTML/CSS, JS/TS, React, Angular (soon).</li>
-              <li><b>Backend:</b> Nodejs/ExpressJs/NestJs, Spring Framework (soon).</li>
-              <li><b>Database:</b> NoSQL/MongoDB, SQLs/MySQL/PostgreSQL (soon).</li>
-              <li><b>Tools & More:</b> Linux (Ubuntu), Git/Github, Docker, CI/CD.<br />
-                
+              <li>
+                <b>Programming Languages:</b> C/C++/Java, JavaScript/TypeScript,
+                Python.
               </li>
-              <li><small>Note: I'm (@Freshman) still learning and practicing.</small></li>
+              <li>
+                <b>Frontend:</b> HTML/CSS, JS/TS, React, Astro, Angular (^).
+              </li>
+              <li>
+                <b>Backend:</b> Nodejs/ExpressJs/NestJs (^), Java/Spring (^).
+              </li>
+              <li>
+                <b>Database:</b> NoSQL/MongoDB, SQLs/MySQL/PostgreSQL (^).
+              </li>
+              <li>
+                <b>Tools & More:</b> Linux/Ubuntu, Git/Github, Docker, CI/CD (^).<br
+                />
+              </li>
+              <li>
+                <br />
+                <small>Note: (^) means learning or practicing :)</small><br />
+                <small
+                  >Info: I have no job experience yet. But would love to have.</small
+                ><br />
+              </li>
             </ul>
           </div>
         </div>
-        
+
         <!-- 
         <p class="mahabub__highlight">
           This website is under-development :) <br />
